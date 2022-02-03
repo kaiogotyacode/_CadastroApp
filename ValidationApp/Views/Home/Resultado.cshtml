@@ -1,0 +1,53 @@
+﻿@model ValidationApp.Models.Pessoa
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Validation - Dados Coletados</h2>
+
+<fieldset>
+    <legend>Validação - Cadastro Pessoa</legend>
+
+    <div>
+        <label for="Nome"> Nome da Pessoa: </label>
+    </div>
+    <div>
+        <input name="Nome" type="text" readonly value="@Model.Nome" />
+    </div>
+
+    <div>
+        <label for="Email"> Email da Pessoa: </label>
+    </div>
+    <div>
+        <input name="Email" type="text" readonly value="@Model.Email" />
+    </div>
+
+
+    <div>
+        <label for="Idade"> Idade da Pessoa: </label>
+    </div>
+    <div>
+        <input name="Idade" type="text" readonly value="@Model.Idade" />
+    </div>
+
+
+
+    <div>
+        <label for="Telefone"> Telefone da Pessoa: </label>
+    </div>
+    <div>
+        <input name="Telefone" type="text" readonly value="@Model.Telefone" />
+    </div>
+
+
+    <div>
+        <label for="Senha"> Senha da Pessoa: </label>
+    </div>
+    <div>
+        <input name="Senha" type="text" readonly value="@Model.Senha" />
+    </div>
+
+    <a href="~/Home/Index" class="btn btn-primary" style="margin-top: 10px">Voltar</a>
+
+</fieldset>
+

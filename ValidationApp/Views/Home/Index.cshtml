@@ -1,0 +1,90 @@
+﻿@model ValidationApp.Models.Pessoa
+@{
+    ViewBag.Title = "Cadastrar Pessoa";
+}
+
+
+
+<h1 class="display-4"> Cadastro de Cliente</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <form action="~/Home/Resultado" method="post">
+        <fieldset>
+            <legend>Dados do Cliente  </legend>
+
+
+
+            @* Campo: Nome *@
+            <div>
+                <label for="Nome">Nome:</label>
+            </div>
+            <div>
+                @Html.EditorFor(model => model.Nome)
+                @Html.ValidationMessageFor(model => model.Nome)
+            </div>
+
+
+            @* Campo: E-mail *@
+            <div>
+                <label for="Email">E-mail:</label>
+            </div>
+            <div>
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+
+            @* Campo: Idade *@
+            <div>
+                <label for="Idade">Idade:</label>
+            </div>
+            <div>
+                @Html.EditorFor(model => model.Idade)
+                @Html.ValidationMessageFor(model => model.Idade)
+            </div>
+
+
+            @* Campo: Telefone *@
+            <div>
+                <label for="Telefone">Telefone:</label>
+            </div>
+            <div>
+                @Html.EditorFor(model => model.Telefone)
+                @Html.ValidationMessageFor(model => model.Telefone)
+            </div>
+
+
+            @* Campo: Senha *@
+            <div>
+                <label for="Senha">Senha:</label>
+            </div>
+            <div>
+                @Html.EditorFor(model => model.Senha)
+                @Html.ValidationMessageFor(model => model.Senha)
+            </div>
+
+
+            @* Campo: Confirmar Senha *@
+            <div>
+                <label for="C_Senha">Confirmar senha:</label>
+            </div>
+            <div>
+                @Html.EditorFor(model => model.C_Senha)
+                @Html.ValidationMessageFor(model => model.C_Senha)
+            </div>
+
+
+            <input style="margin-top: 10px;" type="submit" value="Enviar" class="btn btn-success" />
+
+        </fieldset>
+    </form>
+
+}
+
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
